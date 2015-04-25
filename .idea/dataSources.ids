@@ -17,6 +17,18 @@
       <column name="ctime" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
+    <table name="products" schema="" catalog="test" type="TABLE">
+      <column name="title" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="firstname" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="mainname" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="price" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="discount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="playlength" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="numpages" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="type" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="J2NkJw=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
     <table name="weibo" schema="" catalog="test" type="TABLE">
       <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="title" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
