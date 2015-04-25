@@ -1,0 +1,21 @@
+/*CSS背景
+background-attachment
+background-color
+background-image
+background-position
+background-repeat
+background-size
+background-origin
+background-clip
+*/
+body{
+    background-image: url("../favicon.ico");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 80%,80%;
+}
+p{
+    background-color: cornflowerblue;
+    width: 200px;
+    padding: 10px;
+}

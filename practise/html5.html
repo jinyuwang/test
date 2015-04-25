@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css"/>
+    <style type="text/css">
+        span{color: red}
+    </style>
+    head lang="zh" | head <br>
+</head>
+<body background="image/metinfo.gif"> <!--here-->
+<b>###############
+    <a href="http://my.tv.sohu.com/pl/8387912/77728911.shtml" target="_blank" style="color: crimson">
+        HTML5系列 第十二集 HTML5块元素标签的使用
+    </a>###############
+</b>
+<br/>
+<!--块-->
+<h1>hi</h1>
+<p>hi</p>
+<ul type="disc">
+    <li>hi</li>
+</ul>
+<ul type="square">
+    <li>h</li>
+    <li>i</li>
+</ul>
+<ol type="a" start="5">
+    <li>h</li>
+    <li>i</li>
+</ol>
+<!--内联-->
+<b>hi</b>
+<a href="">超链</a>
+<div id="divid">
+    <p>hello</p>
+    <a href="">点击我呀</a>
+</div>
+<div id="divspan">
+    <p><span>span text here !!!</span> hello</p>
+    <a href="">点击我呀</a>
+</div>
+<!--here-->
+<p>
+    <pre>块元素、内联元素、div元素、span元素</pre>
+
+</p>
+<b>###############
+    <a href="http://my.tv.sohu.com/pl/8387912/77728793.shtml" target="_blank" style="color: crimson">
+        HTML5系列 第十一集 HTML5列表的使用:列表、块、布局
+    </a>###############
+</b><br/>
+<table border="1" cellpadding="10" align="center">
+    <tr>
+        <th>标签</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>ol</td><!--A,a,I,i,start-->
+        <td>有序列表</td>
+    </tr>
+    <tr>
+        <td>ul</td><!--属性：disc,circle,square-->
+        <td>无序列表</td>
+    </tr>
+    <tr>
+        <td>li</td>
+        <td>列表项</td>
+    </tr>
+    <tr>
+        <td>dl</td>
+        <td>列表</td>
+    </tr>
+    <tr>
+        <td>dt</td>
+        <td>列表项</td>
+    </tr>
+    <tr>
+        <td>dd</td>
+        <td>描述</td>
+    </tr>
+</table>
+<p align="center">列表</p>
+<br/>
+<p align="center">
+<ul type="disc">
+    <li>apple</li>
+    <li>pear</li>
+    <li>banana</li><!--嵌套-->
+    <ul type="square">
+        <li>apple</li>
+        <li>pear</li>
+        <li>banana</li>
+    </ul>
+</ul>
+<ul type="circle">
+    <li>apple</li>
+    <li>pear</li>
+    <li>banana</li>
+</ul>
+<ul type="square">
+    <li>apple</li>
+    <li>pear</li>
+    <li>banana</li>
+</ul>
+<ol type="A">
+    <li>apple</li><!--嵌套-->
+    <ul type="disc">
+        <li>apple</li>
+        <li>pear</li>
+        <li>banana</li>
+    </ul>
+    <li>pear</li><!--嵌套-->
+    <ul type="circle">
+        <li>apple</li>
+        <li>pear</li>
+        <li>banana</li>
+    </ul>
+    <li>banana</li><!--嵌套-->
+    <ul type="square">
+        <li>apple</li>
+        <li>pear</li>
+        <li>banana</li>
+    </ul>
+</ol>
+<ol type="a">
+    <li>apple</li>
+    <li>pear</li>
+    <li>banana</li>
+</ol>
+<ol type="I">
+    <li>apple</li>
+    <li>pear</li>
+    <li>banana</li>
+</ol>
+<ol type="i">
+    <li>apple</li>
+    <li>pear</li>
+    <li>banana</li>
+</ol>
+<ol start="11">
+    <li>apple</li>
+    <li>pear</li>
+    <li>banana</li>
+</ol>
+<dl><!--自定义列表，dl,dt,dd-->
+    <dt>apple</dt>
+    <dd>describe-apple</dd>
+    <dt>pear</dt>
+    <dd>describe-pear</dd>
+    <dt>banana</dt>
+    <dd>describe-banana</dd>
+</dl>
+</p>
+<b>###############
+    <a href="http://my.tv.sohu.com/pl/8387912/77728686.shtml" target="_blank" style="color: crimson">
+        HTML5系列 第十集 HTML5表格使用
+    </a>###############
+</b><br/>
+<!--
+<table> 标签定义 HTML 表格。
+简单的 HTML 表格由 table 元素以及一个或多个 tr、th 或 td 元素组成。
+tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。
+更复杂的 HTML 表格也可能包括 caption、col、colgroup、thead、tfoot 以及 tbody 元素。
+
+一个简单的 HTML 表格，包含两行两列：
+<table border="1">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+标准属性
+id, class, title, style, dir, lang, xml:lang
+事件属性
+onclick, ondblclick, onmousedown, onmouseup, onmouseover,
+onmousemove, onmouseout, onkeypress, onkeydown, onkeyup
+
+TRY 实例
+表格
+这个例子演示如何在 HTML 文档中创建表格。
+表格边框
+本例演示各种类型的表格边框。
+没有边框的表格
+本例演示一个没有边框的表格。
+表格中的标题(Headings)
+本例演示如何显示表格标题。
+空单元格
+本例展示如何使用 "&nbsp;" 处理没有内容的单元格。
+带有标题的表格
+本例演示一个带标题 (caption) 的表格
+跨行或跨列的表格单元格
+本例演示如何定义跨行或跨列的表格单元格。
+表格内的标签
+本例演示如何在不同的元素内显示元素。
+单元格填充(Cell padding)
+本例演示如何使用单元格填充来创建单元格内容与其边框之间的空白。
+单元格间距(Cell spacing)
+本例演示如何使用单元格间距增加单元格之间的距离。
+向表格添加背景颜色或背景图像
+本例演示如何向表格添加背景
+在表格单元中排列内容
+本例演示如何使用 "align" 属性排列单元格内容,以便创建一个美观的表格。
+框架(frame)属性
+本例演示如何使用 "frame" 属性来控制围绕表格的边框。
+-->
+<p align="center">表格</p>
+<table border="1" align="center" bgcolor="#faebd7">
+    <caption style="color: crimson">HTML表格</caption>
+    <tr bgcolor="#7fffd4">
+        <th>表格</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>table</td>
+        <td>定义表格</td>
+    </tr>
+    <tr bgcolor="#7fffd4">
+        <td>caption</td>
+        <td>定义表格标题</td>
+    </tr>
+    <tr>
+        <td>th</td>
+        <td>定义表格的表头</td>
+    </tr>
+    <tr bgcolor="#7fffd4">
+        <td>tr</td>
+        <td>定义表格的行</td>
+    </tr>
+    <tr>
+        <td>thead</td>
+        <td>定义表格的页眉</td>
+    </tr>
+    <tr bgcolor="#7fffd4">
+        <td>tbody</td>
+        <td>定义表格的主体</td>
+    </tr>
+    <tr>
+        <td>tfoot</td>
+        <td>定义表格的页脚</td>
+    </tr>
+    <tr bgcolor="#7fffd4">
+        <td>col</td>
+        <td>定义表格的页属性</td>
+    </tr>
+    <tr>
+        <td>
+            <ul><!--列表-->
+                <li>apple</li>
+                <li>pear</li>
+                <li>banana</li>
+            </ul>
+        </td>
+        <td>定义表格的页脚</td>
+    </tr>
+</table>
+<br/>
+<table border="1" align="center" cellpadding="10">
+    <caption style="color: crimson">HTML表格</caption>
+    <tr bgcolor="#7fffd4">
+        <th>表格</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>table</td>
+        <td>定义表格</td>
+    </tr>
+    <tr bgcolor="#7fffd4">
+        <td>caption</td>
+        <td>定义表格标题</td>
+    </tr>
+    <tr>
+        <td>th</td>
+        <td>定义表格的表头</td>
+    </tr>
+    <tr bgcolor="#7fffd4">
+        <td>tr</td>
+        <td>定义表格的行</td>
+    </tr>
+    <tr>
+        <td>thead</td>
+        <td>定义表格的页眉</td>
+    </tr>
+    <tr bgcolor="#7fffd4">
+        <td>tbody</td>
+        <td>定义表格的主体</td>
+    </tr>
+    <tr>
+        <td>tfoot</td>
+        <td>定义表格的页脚</td>
+    </tr>
+    <tr bgcolor="#7fffd4">
+        <td>col</td>
+        <td>定义表格的页属性</td>
+    </tr>
+    <tr>
+        <td>
+            <ul><!--列表-->
+                <li>apple</li>
+                <li>pear</li>
+                <li>banana</li>
+            </ul>
+        </td>
+        <td>定义表格的页脚</td>
+    </tr>
+</table>
+<b>###############
+    <a href="http://my.tv.sohu.com/pl/8387912/77728619.shtml" target="_blank" style="color: crimson">
+        HTML5系列 第九集 HTML5链接属性及使用
+    </a>###############
+</b><br/>
+1、链接数据：<br/>
+文本链接 <br/>
+图片链接 <br/>
+2、属性：<br/>
+href属性--指向另一个文档的链接，name属性--创建文档内的链接 <br/>
+3、img标签属性：<br/>
+alt:替换文本属性 <br/>
+width:宽 <br/>
+heigh:高 <br/>
+<a href="http://www.baidu.com">点击我</a>
+<br/>
+<a href="http://www.baidu.com">
+    <img src="../image/1342404144.jpg--"
+         alt="百度LOGO"
+         width="120px" height="100px"/>
+    点击我</a>
+<br/>
+<a name="wjy">name = wjy</a><br/>
+<img src="../image/1342404144.jpg" alt="车LOGO" height="500px" width="500px"/><br/>
+<img src="../image/1342404144.jpg" alt="车LOGO"/><br/>
+<img src="../image/1342404144.jpg" alt="车LOGO"/><br/>
+<img src="../image/1342404144.jpg" alt="车LOGO"/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<a href="#wjy">跳转到wjy</a>
+<br/>
+<b>############### <a href="http://my.tv.sohu.com/pl/8387912/77726909.shtml" target="_blank">HTML5系列 第八集 HTML5样式的使用</a>
+    #############</b><br/>
+HTML样式 <br/>HTML链接 <br/>HTML表格 <br/>
+1.标签：<br/>
+style : 样式定义 <br/>
+link : 资源引用 <br/>
+2.属性：<br/>
+rel="stylesheet":外部样式表 <br/>
+type="text/css":引入文档的类型 <br/>
+margin-left:边距 <br/>
+##### <br/>
+1.三种样式表插入方法：<br/>
+外部样式表：<br/>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<br/>
+内部样式表: <br/>
+<style type="text/css">
+    body {
+        background-color: aquamarine
+    }
+
+    p {
+        margin-left: 20px
+    }
+</style>
+<br/>
+内联样式表：<br/>
+
+<p style="color: brown">brown test</p>
+############### 样式-example <br/>
+<!--使用外部样式表-->
+<h1 link rel="stylesheet" type="text/css" href="../mystyle.css">
+    标题一
+</h1>
+<h2 align="center" style="color: darkblue">标题二</h2>
+
+<p><!--使用内部样式表-->
+    <style type="text/css">p {
+        color: darkblue;
+        background-color: burlywood;
+    }</style>
+    HTML5系列 第八集 HTML5样式的使用
+</p>
+<!--使用内联样式表,直接在标签内容指定style-->
+<a>点击我跳转到index.php</a><br/>
+<a style="color: chartreuse">点击我跳转到index.php</a><br/>
+############# HTML格式化 ############<br/>
+标签 描述 <br/>
+搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程 <br/>
+<b>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</b>--b 呈现加粗字体效果<br/>
+<big>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</big>--big 呈现大号字体效果<br/>
+<small>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</small>
+--small 呈现小号字体效果<br/>
+<em>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</em>--em 表示特别强调的部分<br/>
+<i>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</i>--i 呈现斜体的文本<br/>
+<strong>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</strong>--strong 标签和 em 标签一样,用于强调文本,但它强调的程度更强一些。<br/>
+搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程 <sub>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</sub>
+--sub 下标<br/>
+搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程 <sup>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</sup>
+--sup 上标<br/>
+<ins>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</ins>
+--ins 插入字<br/>
+<del>搜狐视频 | 教育 > 专业知识 > 零基础学习HTML5系列课程</del>
+--del 删除字<br/>
+##bgcolor="#ffe4c4"##<br/>
+HTML5元素、属性和格式化<br/>
+开始标签 元素内容 结束标签
+<p> 元素内容 </p>
+Hello world.
+<br/>
+Hello world.
+<br/>
+元素属性？有的有，有的没有。有属性的元素提供更多的信息。属性以键/值对的形式出现。
+常用标签属性：
+h1 : align 对齐方式 <br/>
+body : bgcolor 背景颜色 <br/>
+a : target规定在何处打开链接 <br/>
+通用属性：<br/>
+class :规定元素的类名 <br/>
+id :规定元素的唯一ID <br/>
+style ：规定元素的样式 <br/>
+title :规定元素的额外信息 <br/>
+元素可嵌套，如何进行。
+<b><a href="test.html" target="_blank">local website</a><img src="../image/1342404144.jpg"/></b>
+
+<h1 align="right">标题1</h1>
+
+<h2 align="center">标题2</h2>
+
+<h3>标题3</h3>
+<h4>标题4</h4>
+<h5>标题5</h5>
+<h6>标题6</h6>
+
+<p>JikeXueyuan</p>
+asddddddddddddddddddddddfasdf<br/>
+
+<img src="../favicon.ico"/><br/>
+<a href="../index.php" target="_blank"><img src="../image/1342405015.jpg"/></a>
+</body>
+</html>

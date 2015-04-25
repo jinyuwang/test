@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML5系列 第十七集 HTML5框架、背景、颜色、实体</title>
+    <!--
+html框架
+1、框架标签 frame：框架对于页面的设计者有着很大的作用
+2、框架集标签 frameset：
+框架集标签定义如何将窗口分割为框架；
+每一个frameset定义一系列行或列；
+rows/cols的值规定了每行或每列占据屏幕的面积；
+3、常用标签：noresize，固定框架大小；cols,列；rows,行
+4、内联框架：iframe
+-->
+</head>
+<!--不需要：<body></body>,因为frameset不能加在body标签当中-->
+<!-- cols="20%,60%,20%"-->
+<frameset cols="20%,60%,20%">
+    <frame src="html5-17a.html"/>
+    <frame src="html5-17b.html"/>
+    <frame src="html5-17c.html"/>
+</frameset>
+<a href="http://localhost" target="_self">localhost</a>
+<br/>
+<!--    C->B->A->html5-17,ifrmae嵌套
+<iframe src="html5-17c.html" frameborder="0" width="800" height="800">
+
+</iframe>
+-->
+</html>

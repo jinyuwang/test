@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS基础-介绍及语法</title>
+    <link rel="stylesheet" href="html5-21css.css"/>
+</head>
+<!--
+HTML5系列 第二十一集 CSS基础-介绍及语法
+CSS3介绍
+CSS基础语法、高级语法
+CSS派生选择器、id选择器、选择器、类选择器、属性选择器
+=== 21
+CSS指层叠样式表。极大提高工作效率。
+1、selector {
+	property:value
+}
+e.g.: h1{color:red font-size:14px}
+p{font-familily:sani serif}
+
+选择器的分组
+h1,h2,h3,h4,h5,h6{color:red;}
+
+继承的使用
+==派生选择器 --22 空格
+p{}
+li strong{}
+strong{}
+==id选择器 --23 #
+#id{}
+#divid{}
+也可以用派生选择器[ #divid a{} ]
+==类选择器 --24 以一个点显示
+class也可以用派生选择器 [ .divclass p{} ]
+-->
+<body> <!--<body title="te">  or  <body title=""> -->
+<h1>
+    应用了样式h1
+</h1>
+<h2>
+    应用了样样式h2
+</h2>
+sssssssssssss <br/>
+adf顶替顶替柘城 顶替 <br/>
+<p><strong>P自己的颜色</strong>p红色</p>
+<ul>
+    <li><strong>测试</strong></li>
+    <li><strong>测试</strong></li>
+</ul>
+<p id="pid">hello CSS <a href="http://www.baidu.com">baidu-a红色</a></hre></p>
+<div id="divid">
+    这是一个div
+</div>
+============================================ <br/>
+<p class="pclass">这是一个class效果 <a href="">测试类的派生属性</a></p>
+<div class="divclass">
+    Hello DIV
+    <p>DIV派生</p>
+</div>
+</body>
+</html>
