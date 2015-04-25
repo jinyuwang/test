@@ -4,4 +4,11 @@ if (!$link) {
 	die('Could not connect to MySQL: ' . mysql_error()); 
 } 
 echo 'Connection OK'; mysqli_close($link); 
+echo 'Connection OK<br/>'; 
+echo 'Connection OK<br/>'; 
+echo 'Connection OK<br/>'; 
+echo 'Connection OK<br/>'; 
+echo 'Connection OK<br/>'; 
+echo 'Connection OK<br/>'; 
+echo 'Connection OK<br/>'; 
 ?> 
