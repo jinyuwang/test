@@ -17,6 +17,11 @@ private: 私有类型
 2.self 和　parent 的区别
 a).在子类中常用到这两个对象。他们的主要区别在于self可以调用父类中的公有或受保护的属性，但parent不可以调用
 b).self:: 它表示当前类的静态成员(方法和属性)　与 $this　不同,$this是指当前对象
+ *
+ * 总结
+public 表示全局，类内部外部子类都可以访问；
+private表示私有的，只有本类内部可以使用；
+protected表示受保护的，只有本类或子类或父类中可以访问；
  */
 class BaseClass {
     public $public = 'public';
