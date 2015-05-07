@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+    <style>
+        [title="t"]{
+            color: aqua;
+        }
+        a[href="http://www.baidu.com"]{
+            color: darkolivegreen;
+            font-size: 30px;
+        }
+    </style>
+    <link href="html5-41.css" type="text/css" rel="stylesheet">
+</head>
+<!--
+属性、ID、类选择器；
+元素、ID、属性、后代、子元素、相邻兄弟选择器；选择器分组；
+元素，h1{} a{}, ...
+ID,
+属性,
+后代,
+子元素,
+相邻兄弟
+-->
+<body>
+<h1>heading 1</h1>
+<h2>heading 2</h2>
+<p>Hello world!</p>
+<p title="title">Hello world! [title]属性选择器</p>
+<p title="t">Hello world! [title]属性选择器</p>
+<a href="http://www.baidu.com">我们的家园</a><br/>
+<a href="http://baidu.com">错了吗</a><br/>
+<script>
+    document.write("我爱中华人民共和国！")
+</script>
+<div class="div">极客学院
+<p class="div p1">想学什么？</p>
+<p class="div p2">怎么学？</p>
+<p class="div p3">学了么？</p>
+</div>
+<p id="idp">ID选择器</p>
+<p>asdfad 顶替<strong> 后代选择器 --- p strong {} ==!! 晨跑</strong>lll田田团团圆圆</p>
+</body>
+</html>

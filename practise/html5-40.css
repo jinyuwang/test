@@ -1,0 +1,32 @@
+/*
+CSS浮动：
+float属性可用的值，left,right,none,inherit
+clear属性，去掉浮动属性-包括继承来的属性，left,right; both; inherit
+*/
+#fd{
+    width: 100px;
+    height: 100px;
+    background-color: #FFCCFF;
+    float: right;
+}
+#sd{
+    width: 200px;
+    height: 100px;
+    background-color: #55CC33;
+    float: right;
+}
+#td{
+    width: 100px;
+    height: 100px;
+    background-color: #AACCFF;
+    float: right;
+}
+#container{
+    width:200px;
+    height: 400px;
+    background-color: #FFCC00;
+    float: right;
+}
+#txt{
+    clear: both;
+}

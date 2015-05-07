@@ -1,0 +1,40 @@
+/*通配符*/
+*{
+    font-family: "微软雅黑", "宋体", "新宋体";
+}
+/*选择器分组*/
+h1,h2{
+    color: red;
+}
+/*元素选择器*/
+p{
+    color: blue;
+}
+/*类选择器*/
+.div{
+    color: #55CC33;
+    font-size: xx-large;
+}
+/*多类选择器.class.class*/
+.div .p1{
+    font-size: large;
+}
+.div .p2{
+    font-size: x-large;
+}
+.div .p3{
+    font-size: xx-large;
+}
+/*ID选择器：只能在文档中使用一次，而类可以多次使用；ID选择器不能结合使用；当使用js时候，需要用到id选择器;
+加载方向：id是先找到结构再找到内容，然后再渲染；类是先渲染，再结构再内容。
+*/
+#idp{
+    font-family: 'Microsoft Sans Serif', Arial, Helvetica, Verdana;
+    color: #FDD800;
+}
+/*属性选择器 <style><style/>*/
+/*后代选择器*/
+p strong{
+    color: #FF4488;
+}
+/*相邻兄弟选择器，可选择紧接在另一个元素后的元素，且二者有相同父元素。例如：h1+p{} */

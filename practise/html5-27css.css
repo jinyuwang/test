@@ -1,0 +1,93 @@
+body p{
+    color: red;
+    text-align: left;
+}
+body h1{
+    color: cornflowerblue;
+    text-align: left;
+    text-indent: 20px;
+    text-shadow: 5px 5px 1px #FF4488;
+}
+#p1{
+    text-transform: capitalize;
+}
+#p2{
+    text-transform: lowercase;
+    font-family: myfont;
+}
+#p3{
+    text-transform: uppercase;
+    font: 40px;
+    font-family: fantasy;
+}
+/*自定义字体名称--28*/
+@font-face {
+    font-family: myfont;
+    src: url();
+}
+/*CSS链接的四种状态--29*/
+a:link{
+    color: #FF4488;
+    text-decoration: blink;
+    background-color: antiquewhite;
+}
+a:visited{
+    color: cornflowerblue;
+}
+a:hover{
+    color: aqua;
+}
+a:active{
+    color: blue;
+}
+/*CSS列表--39*/
+ul.ul1{
+    list-style: cjk-ideographic;
+}
+ul.ul2{
+    /*
+    list-style: hiragana;
+    */
+    list-style-image: url("favicon.ico");
+}
+/*
+CSS表格--极大改善表格的外观
+*/
+/*
+#tb,tr,th,td{
+    border: 2px solid blue;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: azure;
+    border-collapse: collapse;
+}
+./点  class
+#      id
+
+*/
+#tb{
+    border-collapse: collapse;
+    width: 500px;
+}
+#tb td,#tb th{
+    border: 1px solid red;
+    padding: 5px;
+}
+#tb th{
+    text-align: right;
+    background-color: cornflowerblue;
+    color:#FFFFFF;
+}
+#tb tr.alt td{
+    color:black;
+    background-color: mediumaquamarine;
+}
+/*
+CSS轮廓--32
+*/
+p{
+    outline-style: dotted;
+    outline-color: antiquewhite;
+    outline-width: 3px;
+}

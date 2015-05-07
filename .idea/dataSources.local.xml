@@ -7,6 +7,9 @@
       <schema-pattern>test.*</schema-pattern>
       <default-schemas>test.*</default-schemas>
     </data-source>
+    <data-source name="SQLite" uuid="ff8fcaa3-2750-40a9-a6f3-dc93d20e367e">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
   </component>
 </project>
 

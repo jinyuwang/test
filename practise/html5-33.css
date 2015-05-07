@@ -1,0 +1,66 @@
+/*
+CSS盒子模型--33~38
+盒子模型概述
+内容-content（height,width）
+内边距-padding-33
+外边距-margin
+边框-border-34
+外边距合并
+*/
+
+td{
+    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+p{
+    border-top-style: dashed;
+    border-bottom-style: groove;
+    border-color: #FF4488;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+.divid{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    box-shadow: 10px 10px 5px #FFCCFF;
+    background-color: bisque;
+    text-shadow: 5px 5px #FDD855;
+}
+body{
+    margin: 0px;
+}
+.marginid{
+    background-color: cornflowerblue;
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+}
+.container{
+    margin: 10px;
+}
+.bd{
+    border-style: dotted;
+}
+.pd{
+    padding: 50px;
+}
+.content{
+    background-color: #FDD855;
+}
+.container1{
+    margin: 10px;
+}
+.bd1{
+    border-style: dotted;
+}
+.pd1{
+    padding: 50px;
+}
+.content1{
+    background-color: #FDD855;
+}

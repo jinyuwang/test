@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*对齐 -44 */
+.div{
+    width: 70%;
+    height: 1000px;
+    background-color: red;
+    /*居中
+    margin-left: auto;
+    margin-right: auto;
+    */
+    /*绝对位置
+    position: absolute;
+    left: 0px;    right
+    */
+    float: right;
+}
+/*尺寸 -45*/
+
+.p1{
+    line-height: normal;
+    max-width: 150px;
+    cursor: all-scroll;
+}
+.p2{
+    width: 200px;
+    line-height: 200%;
+    cursor: cell;
+}
+.p3{
+    cursor: e-resize;
+    line-height: 50%;
+    display: inline;
+}
+li{
+    list-style: none;
+    display: inline;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#div1{
+    width: 950px;
+    height: auto;
+    margin: 20px auto;
+}
+ul{
+    width: 350px;
+    height: auto;
+    float: left;
+}
+a:link,a:visited{
+    text-decoration: none;
+    background-color: burlywood;
+    color: aliceblue;
+    width: 400px;
+    text-align: center;
+}
+a:active,a:hover{
+    background-color: crimson;
+}

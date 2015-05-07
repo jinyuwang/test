@@ -1,0 +1,87 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: #FFCCFF;
+    transition: width 2s,height 2s,transform 2s;
+    -webkit-transform: width 2s,height 2s,transform 2s;
+    transition-delay: 2s;
+    -webkit-transition-delay: 2s;
+}
+div:hover{
+    width: 200px;
+    height: 200px;
+    transform: rotate(360deg);
+}
+.div1{
+    column-count: 3;
+    -webkit-column-count:3
+    column-rule:5px outset #FF0000
+    -webkit-column-rule:5pxoutset #FF0000
+}
+/*
+.div2{
+    transform: translate(100px,100px);
+    -webkit-transform: translate(200px,100px);*/
+/*safari,chrome*//*
+
+    -ms-transform: translate(200px,100px);*/
+/*ie*//*
+
+    -o-transform: translate(200px,100px);*/
+/*opera*//*
+
+    -moz-transform: translate(200px,100px);*/
+/*firefox*//*
+
+}*/
+/*
+.div2{
+    transform: rotate(200deg);
+    -webkit-transform: rotate(200deg);
+safari,chrome
+
+    -ms-transform: rotate(200deg);
+ie
+
+    -o-transform: rotate(200deg);
+opera
+
+    -moz-transform: rotate(200deg);
+firefox
+
+}
+*/
+
+/*.div2{
+    transform: scale(1,2);
+    -webkit-transform: scale(1,2);
+    *//*safari,chrome*//*
+    -ms-transform: scale(1,2);
+    *//*ie*//*
+    -o-transform: scale(1,2);
+    *//*opera*//*
+    -moz-transform: scale(1,2);
+    *//*firefox*//*
+}*/
+/*.div2{
+    transform: skew(30deg,20deg);
+    -webkit-transform: skew(30deg,20deg);
+    *//*safari,chrome*//*
+    -ms-transform: skew(30deg,20deg);
+    *//*ie*//*
+    -o-transform: skew(30deg,20deg);
+    *//*opera*//*
+    -moz-transform: skew(30deg,20deg);
+    *//*firefox*//*
+}*/
+.div2{
+    transform: rotateX(60deg);
+    -webkit-transform: rotateX(60deg);
+    /*safari,chrome*/
+    -ms-transform: rotateX(60deg);
+    /*ie*/
+    -o-transform: rotateX(60deg);
+    /*opera*/
+    -moz-transform: rotateX(60deg);
+    /*firefox*/
+}

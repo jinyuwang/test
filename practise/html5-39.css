@@ -1,0 +1,32 @@
+#pos1{
+    width: 100px;
+    height: 300px;
+    background-color: #FFCCFF;
+    position: fixed;    /*fixed , relative, absolute, ...*/
+    left: 40px;
+    top: 20px;
+    z-index: 3; /* z-index, 覆盖顺序，值大的在上层 */
+}
+#pos2{
+    width: 100px;
+    height: 300px;
+    background-color: #55CC33;
+    position: relative;    /*fixed , relative, absolute, ...*/
+    left: 140px;
+    top: 120px;
+    z-index: 2;
+}
+#pos3{
+    width: 100px;
+    height: 300px;
+    background-color: #AACCFF;
+    position: absolute;    /*fixed , relative, absolute, ...*/
+    left: 40px;
+    top: 20px;
+    z-index: 1;
+}
+/*
+CSS浮动：
+float属性可用的值，left,right,none,inherit
+clear属性，去掉浮动属性-包括继承来的属性，left,right; both; inherit
+*/
