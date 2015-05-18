@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS输出、语法、语句</title>
+</head>
+<body>
+<div>
+    <div>
+        <h1>我的第一个 Web 页面</h1>
+
+        <p id="demo">我的第一个段落</p>
+
+        <script>
+            document.getElementById("demo").innerHTML = "段落已修改。";
+        </script>
+        <p>
+            <script>
+                document.write(Date());
+            </script>
+        </p>
+    </div>
+    <div>
+        <button onclick="myFunction()">点我</button>
+        <button onclick="myFunction1()">点我1</button>
+        <script>
+            function myFunction() {
+                //document.write(Date());
+                document.getElementById("demo").innerHTML = "Hello Dolly.";
+            }
+            function myFunction1() {
+                //document.write(Date());
+                document.getElementById("demo").innerHTML = "你好, Dolly.";
+            }
+        </script>
+    </div>
+    <div>
+        <script>
+            a = 5;
+            b = 6;
+            c = a + b;
+            d = 3.1415;
+            e = 11e5;
+            f = d * e;
+            //浏览器中(Chrome, IE, Firefox) 使用 F12 来启用调试模式， 在调试窗口中点击 "Console" 菜单。
+            console.log(c);
+            document.write(f);
+            document.write('<br/>');
+            document.write(16 + "Volvo");
+        </script>
+    </div>
+</div>
+</body>
+</html>

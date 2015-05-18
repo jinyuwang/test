@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS条件语句、switch语句、循环语句</title>
+</head>
+<body>
+<p>
+    <!--
+    <script src="17.js"></script>
+    -->
+    <script>
+        var day=new Date().getDay();
+        document.write("switch:");
+        switch(day)
+        {
+            case 1:
+                document.write("day="+day+",it is Monday");
+                break;
+            case 2:
+                document.write("day="+day+",it is Tuesday");
+                break;
+            case 3:
+                document.write("day="+day+",it is Wednesday");
+                break;
+            case 4:
+                document.write("day="+day+",it is Thursday");
+                break;
+            case 5:
+                document.write("day="+day+",it is Friday");
+                break;
+            case 6:
+                document.write("day="+day+",it is Saturday");
+                break;
+            case 0 :
+                document.write("day="+day+",it is Sunday");
+                break;
+        }
+        document.write("<br/>=========================typeof day is "+typeof day+"<br/>");
+        document.write("if:");
+        if(day==1)
+        {
+            document.write("day="+day+",it is Monday");
+        }
+        else if(day==2)
+        {
+            document.write("day="+day+",it is Tuesday");
+        }
+        else if(day==3)
+        {
+            document.write("day="+day+",it is Wednesday")
+        }
+        else if(day==4)
+        {
+            document.write("day="+day+",it is Thursday");
+        }
+        else if(day==5)
+        {
+            document.write("day="+day+",it is Friday");
+        }
+        else if(day==6)
+        {
+            document.write("day="+day+",it is Saturday");
+        }
+        else
+        {
+            document.write("day="+day+",it is Sunday");
+        }
+        document.write("<br/>========================="+"<br/>");
+        var cars = new Array();
+        var x;
+        for(x=0;x<100;x++)
+        {
+            cars[x]="car_"+x;
+        }
+
+        var y;
+        for(y in cars)
+        {
+            document.write("for(y in cars):"+cars[y]+"<br/>");
+        }
+        for(x=cars.length-1;x>=0;x--)
+        {
+            document.write("for(x=cars.length-1;x>=0;x--):"+cars[x]+"<br/>");
+        }
+        document.write("<br/>========================="+"<br/>");
+        // for/in 语句循环遍历对象的属性：
+        var person={fname:"John",lname:"Doe",age:25};
+        var txt="<br/>";
+        for (aa in person)
+        {
+            txt=txt+aa+";"+ person[aa]+"<br/>";
+        }
+        document.write("<br/>========================="+txt+"<br/>");
+        //因为i未定义，所以没进入循环
+        while (i<5)
+        {
+            x=x + "The number is " + i + "<br>";
+            i++;
+            document.write(i+"!!");
+        }
+        ///////先执行一次再判断
+        do
+        {
+            x=x + "The number is " + i + "<br>";
+            i++;
+            document.write(i+"~~");
+        }
+        while (i<5);
+        document.write("<br/>========================="+x+"<br/>");
+        // break , continue , labelNAME: statements;
+        // break labelNAME; 带标签可在任何代码块中用，不带标签只能在循环或switch中用。
+        cars=["BMW","Volvo","Saab","Ford"];
+        list:
+        {
+            document.write(cars[0] + "-list<br>");
+            document.write(cars[1] + "-list<br>");
+            document.write(cars[2] + "-list<br>");
+            break list;
+            document.write(cars[3] + "-list<br>");
+            document.write(cars[4] + "-list<br>");
+            document.write(cars[5] + "-list<br>");
+        }
+        // continue labelNAME; continue带标签也只能用在循环中;
+        for (i=0;i<10;i++)
+        {
+            if (i==3)
+            {
+                break;
+            }
+            x=x + "The number is " + i + "<br>";
+        }
+        document.write("<br/>===null = undefined==="+x+"<br/>");
+        for (i=0;i<10;i++)
+        {
+            if (i==3) break;
+            x=x + "The number is " + i + "<br>";
+        }
+        document.write("<br/>===null = undefined==="+x+"<br/>");
+
+        cars=["BMW","Volvo","Saab","Ford"];
+        var i=0;
+        for (;cars[i];)
+        {
+            document.write(cars[i] + "-for<br>");
+            i++;
+        }
+        document.write("<br/>========================="+"<br/>");
+        cars=["BMW","Volvo","Saab","Ford"];
+        var i=0;
+        while (cars[i])
+        {
+            document.write(cars[i] + "-while<br>");
+            i++;
+        }
+        document.write("<br/>========================= many typeof"+"<br/>");
+        document.write(typeof "Kenny"+"<br/>");
+        document.write(typeof 3.14+"<br/>");
+        document.write(typeof false+"<br/>");
+        document.write(typeof [1,2,3,4]+"<br/>");
+        document.write(typeof {name:"kenny",age:34}+"<br/>");
+////////////
+        document.write("typeof undefined = "+typeof undefined+"<br/>");
+        document.write("typeof null = "+typeof null +"<br/>");
+        document.write("(null===undefined) = "+(null===undefined) +"<br/>");
+        document.write("(null==undefined) = "+(null==undefined) +"<br/>");
+        document.write("<br/>========================="+"<br/>");
+
+    </script>
+</p>
+</body>
+</html>

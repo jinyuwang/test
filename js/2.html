@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS简介</title>
+    <style>
+        body{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<script>
+document.writeln("<h1>这是一个标题</h1>");
+document.writeln("<p>这是一个段落。</p>");
+document.write("aa");
+document.write("<b>bb</b>");
+</script>
+<br/>
+<br/>
+<button type="button" onclick="alert('欢迎！欢迎！欢迎！欢迎！')">点我！</button>
+<pre/>
+<p id="demo">
+    JavaScript.
+</p>
+<script>
+    function chgText() {
+        x = document.getElementById("demo");  //查找元素
+        x.innerHTML = "Hello,JavaScript.";  //修改内容
+        x.style.color="#ff0000";
+        x.style.backgroundColor="#00cc88";
+    }
+    function chgImage()
+    {
+        element=document.getElementById('myimg');
+        if(element.src.match("1.jpg"))
+        {
+            element.src="../image/2.jpg";
+        }
+        else
+        {
+            element.src="../image/1.jpg";
+        }
+    }
+    function ifNum(x)
+    {
+        if (isNaN(x)) {alert("不是数字")};
+    }
+</script>
+<button type="submit" onclick="chgText()">修改内容</button>
+<img id="myimg" onclick="chgImage()" src="../image/1.jpg" width="200" height="200">
+<p>点击进行图片切换</p>
+<form>
+    请输入数值：<input type="text" name="nv">
+    <input type="submit" value="校验" onclick="ifNum(nv.value)">
+</form>
+<p>
+    JavaScript 与 Java 是两种完全不同的语言，无论在概念上还是设计上。
+    Java（由 Sun 发明）是更复杂的编程语言。
+
+    ECMA-262 是 JavaScript 标准的官方名称。
+
+    JavaScript 由 Brendan Eich 发明。它于 1995 年出现在 Netscape 中（该浏览器已停止更新），并于 1997 年被 ECMA（一个标准协会）采纳。
+</p>
+</body>
+</html>

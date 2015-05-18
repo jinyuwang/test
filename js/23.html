@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS类型转换</title>
+</head>
+<body>
+<p>
+    <script>
+        /*
+         在 javascript 中有 5 中不同的数据类型：
+
+         string
+         number
+         boolean
+         object
+         function
+         3 种对象类型：
+
+         object
+         date
+         array
+         2 个不包含任何值的数据类型：
+
+         null
+         undefined
+         */
+        ///////////////////////////////////////////////////////typeof操作符
+        document.write("typeof \"John\"               = "+typeof "John"               +"<br/>");  //返回 string
+        document.write("typeof 3.14                 = "+typeof 3.14                 +"<br/>");  // 返回 number
+        document.write("typeof NaN                  = "+typeof NaN                  +"<br/>");  // 返回 number, Not a Number
+        var tmp = 0/0;
+        if(isNaN(tmp)){
+            alert("var tmp = 0/0;"+"  NaN");
+        }
+
+        document.write("typeof false                = "+typeof false                +"<br/>");  // 返回 boolean
+        document.write("typeof [1,2,3,4]            = "+typeof [1,2,3,4]            +"<br/>");  // 返回 object
+        document.write("typeof {name:'John', age:34}= "+typeof {name:'John', age:34}+"<br/>");  // 返回 object
+        document.write("typeof new Date()           = "+typeof new Date()           +"<br/>");  // 返回 object
+        document.write("typeof function () {}       = "+typeof function () {}       +"<br/>");  // 返回 function
+        document.write("typeof myCar                = "+typeof myCar                +"<br/>");  // 返回 undefined (if myCar is not declared)
+        var tmp = undefined;
+        if (typeof(tmp) == "undefined"){
+            alert("var tmp = undefined;"+"  undefined");
+        }
+
+        document.write("typeof null                 = "+typeof null                 +"<br/>");  // 返回 object
+        var tmp = null;
+        if (!tmp && typeof(tmp)!="undefined" && tmp!=0){
+            alert("var tmp = null;"+"  null");
+        }
+        ///////////////////////////////////////////////////////构造函数属性--constructor
+        document.write("\"John\".constructor             = "+"John".constructor               +"<br/>");  // 返回函数 String()  { [native code] }
+        document.write("(3.14).constructor               = "+(3.14).constructor               +"<br/>");  // 返回函数 Number()  { [native code] }
+        document.write("false.constructor                = "+false.constructor                +"<br/>");  // 返回函数 Boolean() { [native code] }
+        document.write("[1,2,3,4].constructor            = "+[1,2,3,4].constructor            +"<br/>");  // 返回函数 Array()   { [native code] }
+        document.write("{name:'John', age:34}.constructor= "+{name:'John', age:34}.constructor+"<br/>");  // 返回函数 Object()  { [native code] }
+        document.write("new Date().constructor           = "+new Date().constructor           +"<br/>");  // 返回函数 Date()    { [native code] }
+        document.write("function () {}.constructor       = "+function () {}.constructor       +"<br/>");  // 返回函数 Function(){ [native code] }
+    </script>
+</p>
+
+<p id="demo" style="background-color: #FDD800">
+
+</p>
+<script> ///////////////////////////////////////////////////////构造函数属性--constructor
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = "isArray(fruits) = "+isArray(fruits);
+    document.write(fruits.constructor.toString()+"<br/>");
+    document.write('indexOf("Array")='+fruits.constructor.toString().indexOf("Array")+"<br/>");
+    var myDate = new Date();
+    document.write(myDate.constructor.toString()+"<br/>");
+    document.write('indexOf("Array")='+myDate.constructor.toString().indexOf("Array")+"<br/>");
+    document.write('indexOf("Date")='+myDate.constructor.toString().indexOf("Date")+"<br/>");
+    function isArray(myArray) {
+        return myArray.constructor.toString().indexOf("Array") > -1;
+    }
+</script>
+<p>
+    <script>  /////////////////////////////////////////////JavaScript 类型转换
+    //全局方法 String() 可以将数字转换为字符串。
+        var x=123;
+        document.write(String(x)+"<br/>");
+        document.write(String(123)+"<br/>");
+        document.write(String(123+456)+"<br/>");
+    //Number 方法 toString() 也是有同样的效果。
+    document.write(x.toString()+"<br/>");
+    document.write((123).toString()+"<br/>");
+    document.write((123+456).toString()+"<br/>");
+    //
+    document.write(String(Date())+"<br/>");
+    document.write(Date().toString()+"<br/>");
+/*
+方法	描述
+ getDate()	从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+ getDay()	从 Date 对象返回一周中的某一天 (0 ~ 6)。
+ getFullYear()	从 Date 对象以四位数字返回年份。
+ getHours()	返回 Date 对象的小时 (0 ~ 23)。
+ getMilliseconds()	返回 Date 对象的毫秒(0 ~ 999)。
+ getMinutes()	返回 Date 对象的分钟 (0 ~ 59)。
+ getMonth()	从 Date 对象返回月份 (0 ~ 11)。
+ getSeconds()	返回 Date 对象的秒数 (0 ~ 59)。
+ getTime()	返回 1970 年 1 月 1 日至今的毫秒数。
+*/
+    //一元运算符 +
+    var a = "5";
+    var b = + a; //Operator + 可用于将变量转换为数字
+    document.write(a+"<br/>"); //5,字符
+    document.write(b+"<br/>"); //5,数字
+
+    var a = "kenny";
+    var b = + a; //Operator + 不可用于将变量转换为数字
+    document.write(a+"<br/>"); //字符
+    document.write(b+"<br/>"); //数字,NaN
+    ///
+    document.write(Number("3.14")+"<br/>");
+    document.write(Number(" ")+"<br/>");
+    document.write(Number("")+"<br/>");
+    document.write(Number("99 88")+"<br/>");
+    ///
+    document.write(Number(false)+"<br/>");
+    document.write(Number(true)+"<br/>");
+        ///
+        d = new Date();//Number(d)=1970.1.1至今的毫秒数
+    document.write(Number(d)+"<br/>");
+    document.write(d.getTime()+"<br/>");
+///自动类型转换
+  /*
+   5 + null    // 返回 5         because null is converted to 0
+   "5" + null  // 返回"5null"   because null is converted to "null"
+   "5" + 1     // 返回 "51"      because 1 is converted to "1"
+   "5" - 1     // 返回 4         because "5" is converted to 5
+   */
+    ///自动转换为字符串||||当你尝试输出一个对象或一个变量时 JavaScript 会自动调用变量的 toString() 方法：
+        ///数据和布尔值也相互转换
+    // if myVar = 123             // toString 转换为 "123"
+    // if myVar = true            // toString 转换为 "true"
+    // if myVar = false           // toString 转换为 "false"
+
+    </script>
+</p>
+</body>
+</html>
