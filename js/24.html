@@ -3,8 +3,59 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>JS 正则表达式</title>
+    <script>
+        function strSearch(s1,s2)
+        {
+            var str1 = "Visit W3cSchool!";
+            var str2 = "W3cSchool";
+            if(!(s1==null)) str1 = s1;
+            if(!(s2==null)) str2 = s2;
+            var n = str1.search(str2);
+            document.getElementById("demo1").innerHTML = n;
+        }
+        function strReplace(s1,s2)
+        {
+            var str1 = "Visit W3cSchool!";
+            var str2 = "Kenny";
+            if(!(s1==null)) str1 = s1;
+            if(!(s2==null)) str2 = s2;
+            var res = str1.replace(/W3cSchool/i,str2);//修饰符：i,g,m; //表达式：[abc],[0-9],(x|y) //元字符：\d, \s, \b, \uxxxx
+            //量词：n+, n*, n?
+            //var res = str1.replace("W3cSchool",str2);
+            document.getElementById('demo2').innerHTML = "原来值："+str1+"<br/>"+"现在值："+res;
+        }
+        function strTest(vp,vs)
+        {
+            var pa = new RegExp("e");
+            var str = "The best things in life are free";
+            if(vp!=null) pa = new RegExp(vp);
+            if(vs!=null) str = vs;
+            document.getElementById("demo3").innerHTML = "pattern.test--模式匹配是否成功："+ pa.test(str);
+            //也可以这样：/e/.test("The best things in life are free!")
+            //或者： /e/.exec("The best things in life are free!"); //得到 e ；如果不存在，得到 null
+        }
+    </script>
 </head>
 <body>
-
+<p>搜索字符串“W3cSchool”，并显示匹配的起始位置：</p>
+<button onclick="strSearch('123adfwer3','dfw')">hit me 1!</button>
+<p id="demo1">要替换的内容+测试的【str.search】值：
+<script>
+    var s1;
+    var s2;
+    var str1 = "Visit W3cSchool!";
+    var str2 = "W3cSchool";
+    if(!(s1==null)) str1 = s1;
+    if(!(s2==null)) str2 = s2;
+    var n = str1.search(str2);
+    document.write(n+"<br/>");
+</script>
+</p>
+<button onclick="strReplace()">hit me 2!</button>
+<p id="demo2">要替换的内容=>测试的【str.replace】值
+</p>
+<button onclick="strTest('abc','123ssss')">hit me 3!</button>
+<p id="demo3">要替换的内容=>测试的【pattern.test】值
+</p>
 </body>
 </html>

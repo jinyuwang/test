@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript 表单验证</title>
+    <script>
+        function validateFormName()
+        {
+            var x=document.forms["myFormName"]["fname"].value;
+            if (x==null || x=="")
+            {
+                alert("姓必须填写");
+                return false;
+            }
+        }
+        function validateFormEmail()
+        {
+            var x=document.forms["myFormEmail"]["email"].value;
+            var atpos=x.indexOf("@");
+            var dotpos=x.lastIndexOf(".");
+            if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+            {
+                alert("Not a valid e-mail address");
+                return false;
+            }
+        }
+        function validateFormAll()
+        {
+            var name=document.forms["myFormAll"]["fname"].value;
+            var email=document.forms["myFormAll"]["email"].value;
+            if (name==null || name=="")
+            {
+                alert("姓必须填写");
+                return false;
+            }
+            var atpos=email.indexOf("@");
+            var dotpos=email.lastIndexOf(".");
+            if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+            {
+                alert("Not a valid e-mail address");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="myFormName" action="demo-form.php" onsubmit="return validateFormName()" method="post">
+    姓: <input type="text" name="fname">
+    <input type="submit" value="提交">
+</form>
+<form name="myFormEmail" action="demo-form.php" onsubmit="return validateFormEmail();" method="post">
+    Email: <input type="text" name="email">
+    <input type="submit" value="提交">
+</form>
+<form name="myFormAll" action="demo-form.php" onsubmit="validateFormAll()" method="post">
+    姓: <input type="text" name="fname">
+    Email: <input type="text" name="email">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

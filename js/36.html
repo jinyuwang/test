@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript HTML DOM - 改变 HTML/CSS</title>
+</head>
+<body>
+<script>
+    //document.getElementById(id).innerHTML=new HTML
+    //<p id="p1">Hello World!</p>
+        //document.getElementById("p1").innerHTML="New text!";
+    //document.getElementById(id).attribute=new value
+    //<img id="image" src="smiley.gif">
+        //document.getElementById("image").src="landscape.jpg";
+
+</script>
+<h1 id="id1">My Heading 1</h1>
+<button type="button"
+        onclick="document.getElementById('id1').style.color='red'">
+    Click Me!</button>
+
+<p id="p1">这是一个文本。 这是一个文本。 这是一个文本。 这是一个文本。 这是一个文本。 这是一个文本。 这是一个文本。</p>
+<input type="button" value="隐藏文本" onclick="document.getElementById('p1').style.visibility='hidden'" />
+<input type="button" value="显示文本" onclick="document.getElementById('p1').style.visibility='visible'" />
+
+</body>
+</html>

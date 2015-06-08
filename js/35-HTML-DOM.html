@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript HTML DOM</title>
+</head>
+<body>
+<h2>DOM-文档对象模型（Document Object Model）</h2>
+<!--
+通过可编程的对象模型，JavaScript 获得了足够的能力来创建动态的 HTML。
+JavaScript 能够改变页面中的所有 HTML 元素
+JavaScript 能够改变页面中的所有 HTML 属性
+JavaScript 能够改变页面中的所有 CSS 样式
+JavaScript 能够对页面中的所有事件做出反应
+
+查找 HTML 元素,有三种方法来做这件事：
+通过 id 找到 HTML 元素
+通过标签名找到 HTML 元素
+通过类名找到 HTML 元素,
+
+-->
+<div>
+<p id="intro">你好世界!</p>
+<p>该实例展示了 <b>getElementById</b> 方法!</p>
+
+<script>
+    x=document.getElementById("intro");
+    //document.write("<p>文本来自 id 为 intro 段落: " + x.innerHTML + "</p>");
+    document.write("<p>文本来自 id 为 intro 段落: " + x.innerHTML+"</p>");
+</script>
+</div>
+
+<div id="main">
+    <p>1\你好世界!</p>
+    <p>2\ DOM 是非常有用的。</p>
+    <p>3\该实例展示了  <b>getElementsByTagName</b> 方法</p>
+<script>
+    var x=document.getElementById("main");///////
+    var y=x.getElementsByTagName("p");///////
+    document.write('id="main"元素中的第三个段落为：' + y[2].innerHTML);
+</script>
+</div>
+
+<div>
+    <p class="intro">class-intro-你好世界!</p>
+    <p class="intro">class-intro-该实例展示了 <b>getElementsByClassName</b> 方法!</p>
+    <script>
+        x=document.getElementsByClassName("intro");///////
+        document.write("<p>文本来自 class 为 intro 段落: 【" + x[1].innerHTML + "】</p>");
+    </script>
+    <p><b>注意：</b>Internet Explorer 8 及更早 IE 版本不支持 getElementsByClassName() 方法。</p>
+</div>
+</body>
+</html>

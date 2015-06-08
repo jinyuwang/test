@@ -7,6 +7,11 @@
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
     <schema name="" catalog="test"/>
+    <table name="admin" schema="" catalog="test" type="TABLE">
+      <column name="username" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userpass" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="username"/>
+    </table>
     <table name="gbook" schema="" catalog="test" type="TABLE">
       <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="username" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
@@ -28,6 +33,190 @@
       <column name="numpages" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="type" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="J2NkJw=="/>
       <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stb_comments" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="topic_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="replytime" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="id,topic_id,uid"/>
+    </table>
+    <table name="stb_favorites" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uid" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="favorites" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="content" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id,uid"/>
+      <index name="uid" unique="false" columns="uid"/>
+    </table>
+    <table name="stb_links" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="logo" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="is_hidden" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stb_message" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="dialog_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="sender_uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="receiver_uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="create_time" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="create_time" unique="false" columns="create_time"/>
+      <index name="dialog_id" unique="false" columns="dialog_id"/>
+      <index name="sender_uid" unique="false" columns="sender_uid"/>
+    </table>
+    <table name="stb_message_dialog" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="sender_uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="receiver_uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="last_content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="create_time" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="update_time" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="sender_remove" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="receiver_remove" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="sender_read" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="receiver_read" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="messages" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="uid" unique="false" columns="sender_uid,receiver_uid"/>
+      <index name="update_time" unique="false" columns="update_time"/>
+    </table>
+    <table name="stb_nodes" schema="" catalog="test" type="TABLE">
+      <column name="node_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="pid" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="cname" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12" remarks="5YiG57G75ZCN56ew"/>
+      <column name="content" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="keywords" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ico" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="J3VwbG9hZHMvaWNvL2RlZmF1bHQucG5nJw=="/>
+      <column name="master" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="permit" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="listnum" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="clevel" sqlType="VARCHAR" precision="25" scale="0" nullable="true" jdbcType="12"/>
+      <column name="cord" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <primary-key name="PRIMARY" columns="node_id,pid"/>
+    </table>
+    <table name="stb_notifications" schema="" catalog="test" type="TABLE">
+      <column name="nid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="topic_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="suid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="nuid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ntype" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="ntime" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="nid,nuid"/>
+    </table>
+    <table name="stb_page" schema="" catalog="test" type="TABLE">
+      <column name="pid" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="go_url" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="add_time" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_hidden" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="pid"/>
+    </table>
+    <table name="stb_settings" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id,title,type"/>
+    </table>
+    <table name="stb_site_stats" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="item" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="value" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="update_time" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="stb_tags" schema="" catalog="test" type="TABLE">
+      <column name="tag_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tag_title" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="topics" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="tag_id"/>
+      <index name="tag_title" unique="true" columns="tag_title"/>
+    </table>
+    <table name="stb_tags_relation" schema="" catalog="test" type="TABLE">
+      <column name="tag_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="topic_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <index name="fid" unique="false" columns="topic_id"/>
+      <index name="tag_id" unique="false" columns="tag_id"/>
+    </table>
+    <table name="stb_topics" schema="" catalog="test" type="TABLE">
+      <column name="topic_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="node_id" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="uid" sqlType="MEDIUMINT" precision="7" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ruid" sqlType="MEDIUMINT" precision="7" scale="0" nullable="true" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="keywords" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addtime" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="updatetime" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="lastreply" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="views" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="comments" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5" def="MA=="/>
+      <column name="favorites" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="closecomment" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="is_top" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="is_hidden" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="ord" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="topic_id,node_id,uid"/>
+      <index name="ord" unique="false" columns="ord"/>
+      <index name="title" unique="false" columns="title"/>
+      <index name="updatetime" unique="false" columns="updatetime"/>
+    </table>
+    <table name="stb_user_follow" schema="" catalog="test" type="TABLE">
+      <column name="follow_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="follow_uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="addtime" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="follow_id,uid,follow_uid"/>
+    </table>
+    <table name="stb_user_groups" schema="" catalog="test" type="TABLE">
+      <column name="gid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="group_type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="group_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="usernum" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="gid,group_type"/>
+    </table>
+    <table name="stb_users" schema="" catalog="test" type="TABLE">
+      <column name="uid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="salt" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1" remarks="5re35reG56CB"/>
+      <column name="openid" sqlType="CHAR" precision="32" scale="0" nullable="true" jdbcType="1"/>
+      <column name="email" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="avatar" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" def="J3VwbG9hZHMvYXZhdGFyL2RlZmF1bHQvJw=="/>
+      <column name="homepage" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="money" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="credit" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MTAw"/>
+      <column name="signature" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="topics" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="replies" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="notices" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5" def="MA=="/>
+      <column name="follows" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="favorites" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="messages_unread" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="regtime" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="lastlogin" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="lastpost" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="qq" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="group_type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="gid" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="Mw=="/>
+      <column name="ip" sqlType="CHAR" precision="15" scale="0" nullable="true" jdbcType="1"/>
+      <column name="location" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="introduction" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="is_active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="uid,group_type"/>
+      <index name="username" unique="true" columns="username"/>
+    </table>
+    <table name="testtable" schema="" catalog="test" type="TABLE">
+      <column name="xm" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nl" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="xm"/>
     </table>
     <table name="weibo" schema="" catalog="test" type="TABLE">
       <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
