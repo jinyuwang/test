@@ -2,3 +2,5 @@ SELECT
 CONCAT("call sp_market_budget_interface('",DATE_ADD('2015-01-01',INTERVAL b-1 DAY),"',@flag);")
 FROM (SELECT @num:=@num+1 AS b FROM market_budget_day_report a,(SELECT @num:=0) b LIMIT 365) a
 
+git diff
+git diff 2
